@@ -8,11 +8,17 @@ for item in 0...999 {
     numberArray.append(item+1)
     if numberArray[item] % 2 == 0 {
         numberEvenArray.append(item+1)
+        evenSum = evenSum + numberEvenArray[((item+1)/2)-1]
     }
     else {
         numberOddArray.append(item+1)
+        oddSum += numberOddArray[item/2]
     }
 }
-print("Even numbers are: \(numberEvenArray) \n ")
-print("Odd numbers are: \(numberOddArray) \n ")
 
+
+print("Array of even numbers: \(numberEvenArray) \r ")
+print("Array of odd numbers: \(numberOddArray)  \r ")
+
+print("Sum of even numbers: \(evenSum) \r ")
+print("Sum of odd numbers: \(oddSum) \r " )
